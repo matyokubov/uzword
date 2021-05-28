@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uz-Word</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="bootstrap5\bootstrap.min.css">
+</head>
+<body>
+    <div id="main">
+        <header align="center"><h2>Uz-Word</h2></header>
+        <textarea id="enter" class="form-control" placeholder="So`z yozing..."></textarea>
+            <div id="btns">
+                <button class="btn btn-outline-success" style="margin-right: 3px" onclick="clcFunk()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                      <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"/>
+                    </svg>
+                    OK
+                </button>
+                <button class="btn btn-outline-danger" onclick="document.getElementById('enter').value = ''">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" style="margin-bottom: 2px">
+                      <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                    </svg>
+                    Clear
+                </button>
+            </div>
+        
+        <div class="alert alert-success" role="alert" style="margin-top: 20px">
+            <h4 class="alert-heading" id="alert-heading">Ilova haqida</h4>
+            <div id="alert-content">
+                <div id="r1"></div>
+                <div id="r2" style="visibility: hidden;"></div>
+                <div id="info">
+                    Bu sayt orqali so`zlar ustida ishlashingiz mumkin.<br>
+                    Masalan, ona - Bo'g'inlarga ajratish (o-na), Kril-Lotin (она)
+                </div>
+            </div>
+            <hr>
+            <p class="mb-0">Dasturchi: Matyoqubov Firdavs</p>
+        </div>
+        <div id="foot" align="center"><a href="https://github.com/user2020-py">GitHub</a>&nbsp&nbsp<a href="http://t.me/junior_coder_2007">Telegram</a></div>
+    </div>
+    <script type="text/javascript">
+        function clcFunk() {
+            tokenize(document.getElementById('r1'), document.getElementById('enter').value);
+            document.getElementById('alert-heading').innerHTML = 'Natijalar';
+            document.getElementById('info').innerHTML = '';
+            document.getElementById('r2').style.cssText = 'visibility: none; font-size: 1rem;';
+        }
+    </script>
+    <script src="script\tCode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="script\klCode.js"></script>
+</body>
+</html>
